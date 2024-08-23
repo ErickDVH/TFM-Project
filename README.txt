@@ -11,8 +11,14 @@ Introduce el ID de búsqueda personalizada (CX): "ID de buscador"
 -- Colocar si se desea analizar uno o varios dominios como en el ejemplo:
 ¿Deseas analizar un dominio o varios dominios desde un archivo CSV? (uno/varios): "uno/varios"
 -- Si se va analizar un solo dominio, introducir el dominio como en el ejemplo
-Introduce el dominio a analizar: i2cat.net
+Introduce el dominio principal a analizar: i2cat.net
 -- Colocar si se desean resultados detallados como en el ejemplo:
 ¿Desea una salida detallada? (si/no): "si/no"
 -- Si se van analizar varios dominios, introducir el nombre del fichero csv como en el ejemplo
 Introduce el nombre del archivo CSV con los dominios: "ejemplo.csv"
+-- Al final introducir el nombre del archivo CSV con los resultados como en el ejemplo
+Introduce el nombre del archivo CSV con los dominios: "ResultadosFinales"
+-- Colocar si se van realizar comparaciones entre dominios con detalles a traves de Google como en el ejemplo
+¿Desea realizar comparaciones entre dominios con detalles (Google)? (si/no): "si/no"
+-- Colocar si se van realizar comparaciones entre dominios sin detalles a traves de Wayback Machine como en el ejemplo
+¿Desea realizar comparaciones entre dominios sin detalles (WayBack Machine)?(si/no): "si/no"
