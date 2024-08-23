@@ -2,3 +2,5 @@ requests
 python-whois
 pandas
 beautifulsoup4
+csv
+colorama
