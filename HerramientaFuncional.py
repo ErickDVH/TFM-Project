@@ -106,7 +106,6 @@ def obtener_enlaces_externos_wayback(dominio):
     urls_wayback = obtener_enlaces_wayback(dominio)
     enlaces_externos = set()
     for url in urls_wayback:
-        print(f"Analizando {url} desde Wayback Machine...")
         enlaces_pagina = obtener_enlaces_pagina(url)
         for enlace in enlaces_pagina:
             dominio_enlace = urlparse(enlace).netloc
@@ -345,6 +344,7 @@ def comparar_dominios(dominio1, dominio2):
     else:
         print(f"{Fore.RED}No se encontraron enlaces en redes sociales para uno o ambos dominios.{Style.RESET_ALL}")
 
+# Función para comparar dominios de forma simple
 def comparar_dominios_simple(dominio1, dominio2):
     # Inicializa los contadores
     total_criterios = 0
@@ -430,7 +430,8 @@ def guardar_en_csv(datos, nombre_archivo):
                 ])
     except Exception as e:
         print("Error al guardar en el archivo CSV:", e)
-    
+
+# Ejecución de la herramienta
 if __name__ == "__main__":
     # Solicita la clave API de Google Custom Search
     while True:
