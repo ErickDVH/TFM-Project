@@ -211,16 +211,20 @@ def collect_and_correlate_data(domain, api_key, cx, verbose=False):
 # Function to automatically find related domains with WayBack Machine
 def find_related_domains_WayBackMachine(main_domain):
     results = get_external_wayback_links(main_domain)
-    related_domains = {}
+    related_domains = set()
+
+    # List of domains to exclude (social networks and other non-relevant domains)
+    excluded_domains = {
+        'www.youtube.com', 'www.facebook.com', 'www.instagram.com', 'www.twitter.com', 'www.linkedin.com', 'www.pinterest.com', 'www.tiktok.com',
+        'youtube.com', 'facebook.com', 'instagram.com', 'twitter.com', 'linkedin.com', 'pinterest.com', 'tiktok.com', 'es-es.facebook.com', 'es-linkedin.com'
+    }
     for result in results:
+        # Filter out excluded and main domains
         if main_domain not in result:
-            related_domains[result] = {
-                'dns_info': analyze_dns(result),
-                'whois_info': get_whois_info(result),
-                'ssl_info': get_ssl_certificates(result),
-                'wayback_links': get_wayback_links(result)
-            }
-    return related_domains
+            if result and result != main_domain and result not in excluded_domains:
+                related_domains.add(result)
+    
+    return list(related_domains)
 
 # Function to automatically find related domains using Google
 def find_related_domains_Google(main_domain, api_key, cx):
@@ -231,7 +235,7 @@ def find_related_domains_Google(main_domain, api_key, cx):
     # List of domains to exclude (social networks and other non-relevant domains)
     excluded_domains = {
         'www.youtube.com', 'www.facebook.com', 'www.instagram.com', 'www.twitter.com', 'www.linkedin.com', 'www.pinterest.com', 'www.tiktok.com',
-        'youtube.com', 'facebook.com', 'instagram.com', 'twitter.com', 'linkedin.com', 'pinterest.com', 'tiktok.com', 'es-es.facebook.com'
+        'youtube.com', 'facebook.com', 'instagram.com', 'twitter.com', 'linkedin.com', 'pinterest.com', 'tiktok.com', 'es-es.facebook.com', 'es-linkedin.com'
     }
 
     for result in results:

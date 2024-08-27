@@ -216,7 +216,7 @@ def encontrar_dominios_relacionados_WayBackMachine(dominio_principal):
     # Lista de dominios a excluir (redes sociales y otros dominios no relevantes)
     dominios_excluidos = {
         'www.youtube.com', 'www.facebook.com', 'www.instagram.com', 'www.twitter.com', 'www.linkedin.com', 'www.pinterest.com', 'www.tiktok.com',
-        'youtube.com', 'facebook.com', 'instagram.com', 'twitter.com', 'linkedin.com', 'pinterest.com', 'tiktok.com', 'es-es.facebook.com'
+        'youtube.com', 'facebook.com', 'instagram.com', 'twitter.com', 'linkedin.com', 'pinterest.com', 'tiktok.com', 'es-es.facebook.com', 'es-linkedin.com'
     }
 
     for resultado in resultados:
@@ -235,7 +235,7 @@ def encontrar_dominios_relacionados_Google(dominio_principal, api_key, cx):
     # Lista de dominios a excluir (redes sociales y otros dominios no relevantes)
     dominios_excluidos = {
         'www.youtube.com', 'www.facebook.com', 'www.instagram.com', 'www.twitter.com', 'www.linkedin.com', 'www.pinterest.com', 'www.tiktok.com',
-        'youtube.com', 'facebook.com', 'instagram.com', 'twitter.com', 'linkedin.com', 'pinterest.com', 'tiktok.com', 'es-es.facebook.com'
+        'youtube.com', 'facebook.com', 'instagram.com', 'twitter.com', 'linkedin.com', 'pinterest.com', 'tiktok.com', 'es-es.facebook.com', 'es-linkedin.com'
     }
 
     for resultado in resultados:
