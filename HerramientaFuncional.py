@@ -557,3 +557,4 @@ if __name__ == "__main__":
                     print(f"{Back.RED}{Fore.BLACK}Nombre de archivo CSV de salida no válido.{Style.RESET_ALL}")
         else:
             print(f"{Back.RED}{Fore.BLACK}No se encontraron dominios en el archivo CSV.{Style.RESET_ALL}")
+
