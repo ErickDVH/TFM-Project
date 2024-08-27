@@ -1,3 +1,48 @@
+-------------------English Version------------------
+
+Enumeration of domain-related assets
+
+Presentation
+
+It is a tool for domain research and analysis. Designed to help security researchers, system administrators and cybersecurity enthusiasts, it allows you to obtain and correlate a wide variety of information about web domains. This tool collects data from a variety of sources, including Google searches, DNS records, WHOIS information, SSL/TLS certificates, Wayback Machine, and social media links.
+
+Description
+
+The tool offers a number of functionalities for domain analysis and comparison:
+
+Google search: Find domain-related links on the web. Subdomains: Identify subdomains using crt.sh. DNS Records: Scans DNS records for the specified domain. WHOIS information: Gets details about the domain record. SSL/TLS Certificates: Retrieves information about SSL/TLS certificates associated with the domain. Wayback Machine: Search for historical Wayback Machine links to the domain and find external links. Social Media: Search for domain-related links on major social networks. It also allows for domain comparisons based on these criteria and provides a detailed or simplified summary of the information found.
+
+Installation
+
+To use the tool, follow these steps:
+
+Clone the repository:
+
+Copy code: "git clone https://github.com/ErickDVH/TFM-Project.git"
+
+Navigate to the project directory:
+
+Copy code: "cd TFM-Project"
+
+Install dependencies: Make sure you have pip installed and then run:
+
+Copy code: "pip install -r requirements.txt"
+
+Use
+
+Get a Google Custom Search API key: Sign up for Google Cloud Platform and enable the Google Custom Search API to get your API key.
+
+Create a Custom Search ID (CX): Set up a custom search engine in Google Custom Search to get your Custom Search ID (CX).
+
+Run the tool: Start the tool by running the main script:
+
+Copy code: "python FunctionalTool.py"
+
+Follow the on-screen instructions: You will be asked to enter your API key, custom search ID and select the mode of operation (analysis of one or more domains from a CSV file).
+
+
+-------------------Versión Español------------------
+
 Enumeración de activos relacionados con un dominio 
 
 Presentación
